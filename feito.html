@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Agradecimento de Suporte Técnico</title>
+    <style>
+      body {
+        font-family: 'Montserrat', sans-serif;
+        
+        background-size: cover;
+        background-position: center;
+      }
+      h1 {
+        color: #0077c0;
+        font-size: 2.2rem;
+        margin-top: 2rem;
+        text-align: center;
+      }
+      h3 {
+        color: #a1983f;
+        font-size: 1.5rem;
+      }
+      p, ul {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+        font-size: 1rem;
+      }
+      p {
+        margin-top: 1.5rem;
+        font-size: 1rem;
+      }
+      ul {
+        margin-top: 2rem;
+        text-align: left;
+      }
+      li {
+        margin-top: 1rem;
+      }
+      button[id="finalizar"] {
+        background-color: #0077c0;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        margin-top: 9rem;
+        font-size: 1.2rem;
+        display: block;
+        margin: 0 auto;
+        transition: background-color 0.3s ease;
+      }
+
+      button[id="finalizar"]:hover {
+        background-color: #005e91;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Agradecemos sua solicitação de suporte técnico</h1>
+    <p>Nós recebemos sua solicitação e um de nossos representantes de suporte técnico logo entrará em contato com você.</p>
+    <p>Enquanto isso, aqui estão algumas dicas que podem ajudá-lo a resolver seu problema:</p>
+    <ul>
+      <li>Certifique-se de estar usando o link correto.</li>
+      <li>Verifique se está conectado à internet.</li>
+      <li>Verifique se as informações de login estão corretas.</li>
+    </ul>
+
+    <br>
+
+   
+    <script>
+      // Adiciona um evento de clique ao botão "Sair"
+      document.getElementById("finalizar").addEventListener("click", function() {
+        // Encerra a página
+        alert("Obrigado, irei encerrar o navegador!!");
+        var tab = window.open(window.location,"_top");
+        tab.close();
+      });
+    </script> 
+  </body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulário de suporte</title>
+<style>
+  body {
+    background-image: url("./fundo.jpg");
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  
+  form {
+    background-image: linear-gradient(to bottom, #ffffff, #f1f1f1);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    margin: 50px auto;
+  }
+  
+  h2 {
+    color: #333;
+    margin-top: 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+
+  
+  input[type=text], select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  input[type=submit] {
+    background-color: #555;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 50px;
+    cursor: pointer;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #252629;
+  }
+  
+  h3 {
+    color: #a1983f;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
+    margin-top: 30px;
+  }
+</style>
+  </head>
+  <body>
+    <form>
+      <h2>Formulário de suporte MAKTUB</h2>
+      
+    </form>  
+        <form action="https://formsubmit.co/cpd@maktubpromotora.com.br" method="POST">
+            <h3>Protocolo de atendimento: </h3> 
+            <input for="text" id="protocolo" name="protocolo" readonly > 
+            <br>     
+            <br>       
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="setor">Setor:</label>
+            <select id="setor" name="setor" required>
+              <option value="">Selecione o Setor</option>
+              <option value="CPD">CPD</option>
+              <option value="CallCenter">CallCenter</option>
+              <option value="Producao">Produção</option>
+              <option value="VendaDigital">Venda Digital</option>
+              <option value="Matriz">Loja Matriz</option>
+              <option value="Cajazeiras">Loja Cajazeiras</option>
+              <option value="Financeiro">Financeiro</option>
+              <option value="Outros">Outros</option>
+          </select>
+
+            <label for="problema">Tipo do problema:</label>
+            <select id="problema" name="problema" required>
+                <option value="">Selecione um problema</option>
+                <option value="Hardware">Hardware</option>
+                <option value="Software">Software</option>
+                <option value="Rede">Rede</option>
+                <option value="Outros">Outros</option>
+            </select>
+            <label for="descricao">Descrição do problema:</label>
+            <textarea id="descricao" name="descricao" maxlength="500" rows="7" cols="65"></textarea>
+
+            <label for="ramal">Ramal:</label>
+            <input type="text" id="ramal" name="ramal" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+
+            
+
+            <input type="submit" value="Enviar">
+
+            <input type="hidden" name="_subject" value="Novo Suporte">
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://192.168.1.21/SuporteMaktub/feito.html">
+         
+            <script>
+              // DATA PROTOCOLO   
+              var now = new Date();
+              var protocolo = now.getFullYear().toString() +
+                        (now.getMonth() + 1).toString().padStart(2, '0') +
+                        now.getDate().toString().padStart(2, '0') +
+                        now.getHours().toString().padStart(2, '0') +
+                        now.getMinutes().toString().padStart(2, '0') +
+                        now.getSeconds().toString().padStart(2, '0');
+              document.getElementById("protocolo").defaultValue = protocolo;
+            </script>
+            
+
+        </form>
+    
+  </body>
+</html>
